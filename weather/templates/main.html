@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+<body id="body">
+    <p id="header">Know the Weather</p>
+    <span id="datetime">Today:&nbsp;&nbsp;<span>{{date}}</span></span>
+
+<span id="labelcity">Select your city</span>
+<form action="" method="post">
+    {% csrf_token %}
+    <select id="city" name="city" class="form-select">
+        <option value="">Select City</option>
+        <option value="Adur">Adur</option>
+        <option value="Alappuzha">Alappuzha</option>
+        <option value="Aluva">Aluva</option>
+        <option value="Alwaye">Alwaye</option>
+        <option value="Angamali">Angamali</option>
+        <option value="Aroor">Aroor</option>
+        <option value="Arukutti">Arukutti</option>
+        <option value="Attingal">Attingal</option>
+        <option value="Avanoor">Avanoor</option>
+        <option value="Azhikkal">Azhikkal</option>
+        <option value="Badagara">Badagara</option>
+        <option value="Beypore">Beypore</option>
+        <option value="Changanacheri">Changanacheri</option>
+        <option value="Chēlakara">Chēlakara</option>
+        <option value="Chengannur">Chengannur</option>
+        <option value="Cherpulassery">Cherpulassery</option>
+        <option value="Cherthala">Cherthala</option>
+        <option value="Chetwayi">Chetwayi</option>
+        <option value="Chittur">Chittur</option>
+        <option value="Cochin">Cochin</option>
+        <option value="Dharmadam">Dharmadam</option>
+        <option value="Edakkulam">Edakkulam</option>
+        <option value="Elur">Elur</option>
+        <option value="Erattupetta">Erattupetta</option>
+        <option value="Ernakulam">Ernakulam</option>
+        <option value="Ferokh">Ferokh</option>
+        <option value="Guruvayur">Guruvayur</option>
+        <option value="Idukki">Idukki</option>
+        <option value="Iringal">Iringal</option>
+        <option value="Irinjalakuda">Irinjalakuda</option>
+        <option value="Kadakkavoor">Kadakkavoor</option>
+        <option value="Kalamassery">Kalamassery</option>
+        <option value="Kalavoor">Kalavoor</option>
+        <option value="Kalpatta">Kalpatta</option>
+        <option value="Kannangad">Kannangad</option>
+        <option value="Kannavam">Kannavam</option>
+        <option value="Kannur">Kannur</option>
+        <option value="Kasaragod">Kasaragod</option>
+        <option value="Kasaragod District">Kasaragod District</option>
+        <option value="Kattanam">Kattanam</option>
+        <option value="Kayankulam">Kayankulam</option>
+        <option value="Kizhake Chalakudi">Kizhake Chalakudi</option>
+        <option value="Kodungallur">Kodungallur</option>
+        <option value="Kollam">Kollam</option>
+        <option value="Kotamangalam">Kotamangalam</option>
+        <option value="Kottayam">Kottayam</option>
+        <option value="Kovalam">Kovalam</option>
+        <option value="Kozhikode">Kozhikode</option>
+        <option value="Kumbalam">Kumbalam</option>
+        <option value="Kunnamangalam">Kunnamangalam</option>
+        <option value="Kunnamkulam">Kunnamkulam</option>
+        <option value="Kunnumma">Kunnumma</option>
+        <option value="Kutiatodu">Kutiatodu</option>
+        <option value="Kuttampuzha">Kuttampuzha</option>
+        <option value="Lalam">Lalam</option>
+        <option value="Mahē">Mahē</option>
+        <option value="Malappuram">Malappuram</option>
+        <option value="Manjeri">Manjeri</option>
+        <option value="Manjēshvar">Manjēshvar</option>
+        <option value="Mannarakkat">Mannarakkat</option>
+        <option value="Marayur">Marayur</option>
+        <option value="Mattanur">Mattanur</option>
+        <option value="Mavelikara">Mavelikara</option>
+        <option value="Mavoor">Mavoor</option>
+        <option value="Muluppilagadu">Muluppilagadu</option>
+        <option value="Munnar">Munnar</option>
+        <option value="Muvattupula">Muvattupula</option>
+        <option value="Muvattupuzha">Muvattupuzha</option>
+        <option value="Nadapuram">Nadapuram</option>
+        <option value="Naduvannur">Naduvannur</option>
+        <option value="Nedumangad">Nedumangad</option>
+        <option value="Neyyattinkara">Neyyattinkara</option>
+        <option value="Nilēshwar">Nilēshwar</option>
+        <option value="Ottappalam">Ottappalam</option>
+        <option value="Palackattumala">Palackattumala</option>
+        <option value="Palakkad district">Palakkad district</option>
+        <option value="Palghat">Palghat</option>
+        <option value="Panamaram">Panamaram</option>
+        <option value="Pappinisshēri">Pappinisshēri</option>
+        <option value="Paravur Tekkumbhagam">Paravur Tekkumbhagam</option>
+        <option value="Pariyapuram">Pariyapuram</option>
+        <option value="Pathanamthitta">Pathanamthitta</option>
+        <option value="Pattanamtitta">Pattanamtitta</option>
+        <option value="Payyannur">Payyannur</option>
+        <option value="Perumbavoor">Perumbavoor</option>
+        <option value="Perumpavur">Perumpavur</option>
+        <option value="Perya">Perya</option>
+        <option value="Piravam">Piravam</option>
+        <option value="Ponmana">Ponmana</option>
+        <option value="Ponnani">Ponnani</option>
+        <option value="Punalur">Punalur</option>
+        <option value="Ramamangalam">Ramamangalam</option>
+        <option value="Shertallai">Shertallai</option>
+        <option value="Shōranur">Shōranur</option>
+        <option value="Talipparamba">Talipparamba</option>
+        <option value="Tellicherry">Tellicherry</option>
+        <option value="Thanniyam">Thanniyam</option>
+        <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+        <option value="Thrissur">Thrissur</option>
+        <option value="Thrissur District">Thrissur District</option>
+        <option value="Tirur">Tirur</option>
+        <option value="Tiruvalla">Tiruvalla</option>
+        <option value="Vaikam">Vaikam</option>
+        <option value="Varkala">Varkala</option>
+        <option value="Vayalar">Vayalar</option>
+        <option value="Vettur">Vettur</option>
+        <option value="Wayanad">Wayanad</option>
+    </select>
+    <input type="submit" id="submit">
+</form>
+
+{%if temperature%}
+<div id="tdweather">
+    <p id="td">Today's Weather in {{city}}</p>
+    <p id="weathdesc">{{weatherdesc}}</p>
+    <div id="hl">
+        <p>Temperature:&nbsp;&nbsp;<span id="tdhtempval">{{temperature}}°c</span></p>
+        <p>Humidity:&nbsp;&nbsp;<span id="humival">{{humidity}}%</span></p>
+        <p>Wind speed:&nbsp;&nbsp;<span id="wsval">{{wind_speed}}m/s</span></p>
+    </div>
+</div>
+{%endif%}
+
+</body>
+</html>
