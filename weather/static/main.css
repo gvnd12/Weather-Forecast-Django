@@ -1,153 +1,324 @@
-@font-face {
-    font-family: 'bodyreg';
-    src: url(fonts/BinomaTrialRegular-R9Kvv.ttf);
-}
-
-@font-face {
-    font-family: 'bodybold';
-    src: url(fonts/BinomaTrialBold-1jPDj.ttf);
-}
-
-@font-face {
-    font-family: 'weatherval';
-    src: url(fonts/AdventPro-Bold.ttf);
-}
-
-body
+@media only screen and (min-width: 800px)
 {
-    background: url(bg/bg-night.jpg);
+    @font-face {
+        font-family: 'bodyreg';
+        src: url(fonts/BinomaTrialRegular-R9Kvv.ttf);
+    }
+
+    @font-face {
+        font-family: 'bodybold';
+        src: url(fonts/BinomaTrialBold-1jPDj.ttf);
+    }
+
+    @font-face {
+        font-family: 'weatherval';
+        src: url(fonts/AdventPro-Bold.ttf);
+    }
+
+    body
+    {
+        background: url(bg/bg-night.jpg);
+    }
+
+    #header, #subheader
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+
+    #header
+    {
+        font-size: 250%;
+        font-family: 'bodybold';
+    }
+
+    #datetime
+    {
+        font-family: 'bodyreg';
+        font-weight: 900;
+        font-size: 150%;
+        color: white;
+        position: absolute;
+        top: 7%;
+        right: 5%;
+    }
+
+    #datetime>span
+    {
+        font-family: 'weatherval';
+    }
+
+    #labelcity
+    {
+        width: 15%;
+        text-align: center;
+        position: absolute;
+        left: 42.5%;
+        top: 16%;
+        font-family: 'bodyreg';
+        font-size: 120%;
+        color: white;
+    }
+
+    select
+    {
+        font-family: 'bodyreg';
+    }
+
+    #city
+    {
+        width: 15%;
+        height: 30px;
+        position: absolute;
+        left: 39.5%;
+        top: 20%;
+        border-radius: 5px;
+        border: 1px solid rgb(35, 35, 35);
+    }
+
+    #submit
+    {
+        color: #000000;
+        font-family: 'bodyreg';
+        width: 6%;
+        height: 30px;
+        position: absolute;
+        top: 20%;
+        left: 55%;
+        border-radius: 8px;
+        border: 1px solid rgb(74, 74, 74);
+        box-shadow: .5px .5px 2px rgb(58, 58, 58);
+        background: linear-gradient(rgb(255, 255, 255),rgb(206, 206, 206));
+    }
+
+    #daycard
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        position: absolute;
+        top: 55%;
+        width: 99%;
+    }
+
+    .days
+    {
+        width: 15%;
+        height: 40vh;
+        background-color: black;
+        border-radius: 10px;
+    }
+
+    #tdweather
+    {
+        font-family: 'bodyreg';
+        color: white;
+        font-size: 130%;
+        width: 90%;
+        position: absolute;
+        top: 28%;
+        left: 5%;
+    }
+
+    #weathdesc
+    {
+        text-align: center;
+        font-size: 200%;
+        position: relative;
+        bottom: 35px;
+        font-family: 'bodybold';
+    }
+
+    #hl
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        position: relative;
+        bottom: 80px;
+    }
+
+    #tdhtempval,#humival,#wsval
+    {
+        font-family: 'weatherval';
+        font-size: 300%;
+    }
+
+    #hl>p
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #td
+    {
+        text-align: center;
+    }
 }
 
-#header, #subheader
-{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-}
 
-#header
-{
-    font-size: 250%;
-    font-family: 'bodybold';
-}
 
-#datetime
+@media only screen and (max-width: 1000px)
 {
-    font-family: 'bodyreg';
-    font-weight: 900;
-    font-size: 150%;
-    color: white;
-    position: absolute;
-    top: 6.8%;
-    right: 5%;
-}
-
-#datetime>span
-{
-    font-family: 'weatherval';
-}
-
-#labelcity
-{
-    width: 10%;
-    text-align: center;
-    position: absolute;
-    left: 45%;
-    top: 16%;
-    font-family: 'bodyreg';
-    font-size: 120%;
-    color: white;
-}
-
-select
-{
-    font-family: 'bodyreg';
-}
-
-#city
-{
-    width: 15%;
-    height: 30px;
-    position: absolute;
-    left: 42.5%;
-    top: 20%;
-    border-radius: 5px;
-    border: 2px solid black;
-}
-
-#submit
-{
-    width: 5%;
-    height: 30px;
-    position: absolute;
-    top: 20%;
-    left: 58%;
-    border-radius: 5px;
-    border: 2px solid black;
-}
-
-#daycard
-{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    position: absolute;
-    top: 55%;
-    width: 99%;
-}
-
-.days
-{
-    width: 15%;
-    height: 40vh;
-    background-color: black;
-    border-radius: 10px;
-}
-
-#tdweather
-{
-    font-family: 'bodyreg';
-    color: white;
-    font-size: 130%;
-    width: 90%;
-    position: absolute;
-    top: 23%;
-    left: 5%;
-}
-
-#weathdesc
-{
-    text-align: center;
-    font-size: 200%;
-    position: relative;
-    bottom: 35px;
-    font-family: 'bodybold';
-}
-
-#hl
-{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    position: relative;
-    bottom: 80px;
-}
-
-#tdhtempval,#humival,#wsval
-{
-    font-family: 'weatherval';
-    font-size: 300%;
-}
-
-#hl>p
-{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#td
-{
-    text-align: center;
+    @font-face {
+        font-family: 'bodyreg';
+        src: url(fonts/BinomaTrialRegular-R9Kvv.ttf);
+    }
+    
+    @font-face {
+        font-family: 'bodybold';
+        src: url(fonts/BinomaTrialBold-1jPDj.ttf);
+    }
+    
+    @font-face {
+        font-family: 'weatherval';
+        src: url(fonts/AdventPro-Bold.ttf);
+    }
+    
+    body
+    {
+        background: url(bg/bg-night.jpg);
+    }
+    
+    #header, #subheader
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(255, 255, 255);
+    }
+    
+    #header
+    {
+        font-size: 250%;
+        font-family: 'bodybold';
+    }
+    
+    #datetime
+    {
+        text-align: center;
+        font-family: 'bodyreg';
+        font-weight: 900;
+        font-size: 150%;
+        color: white;
+        position: absolute;
+        width: 40%;
+        top: 12%;
+        left: 30%;
+    }
+    
+    #datetime>span
+    {
+        font-family: 'weatherval';
+    }
+    
+    #labelcity
+    {
+        width: 30%;
+        text-align: center;
+        position: absolute;
+        left: 35%;
+        top: 20%;
+        font-family: 'bodyreg';
+        font-size: 120%;
+        color: white;
+    }
+    
+    select
+    {
+        font-family: 'bodyreg';
+    }
+    
+    #city
+    {
+        width: 30%;
+        height: 30px;
+        position: absolute;
+        left: 35%;
+        top: 24%;
+        border-radius: 5px;
+        border: 1px solid rgb(35, 35, 35);
+    }
+    
+    #submit
+    {
+        font-family: 'bodyreg';
+        width: 15%;
+        height: 30px;
+        position: absolute;
+        top: 29%;
+        left: 42.5%;
+        border-radius: 8px;
+        border: 1px solid rgb(74, 74, 74);
+        box-shadow: .5px .5px 2px rgb(58, 58, 58);
+        background: linear-gradient(rgb(255, 255, 255),rgb(206, 206, 206));
+    }
+    
+    #daycard
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        position: absolute;
+        top: 55%;
+        width: 99%;
+    }
+    
+    .days
+    {
+        width: 15%;
+        height: 40vh;
+        background-color: black;
+        border-radius: 10px;
+    }
+    
+    #tdweather
+    {
+        font-family: 'bodyreg';
+        color: white;
+        font-size: 130%;
+        width: 90%;
+        position: absolute;
+        top: 35%;
+        left: 5%;
+    }
+    
+    #weathdesc
+    {
+        text-align: center;
+        font-size: 200%;
+        position: relative;
+        bottom: 30px;
+        font-family: 'bodybold';
+    }
+    
+    #hl
+    {
+        display: block;
+        align-items: center;
+        justify-content: space-evenly;
+        position: relative;
+        bottom: 40px;
+    }
+    
+    #tdhtempval,#humival,#wsval
+    {
+        font-family: 'weatherval';
+        font-size: 300%;
+    }
+    
+    #hl>p
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #td
+    {
+        text-align: center;
+    }
 }
