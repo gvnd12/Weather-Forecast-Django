@@ -8,8 +8,8 @@ from datetime import date
 def weather(request):
     if request.method=='POST':
         city=request.POST['city']
-        api_key='ee935ba07be9f6df5b39b1a2d9d6a795'
-        url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
+        api_key='xxx'
+        url = f"xxxxxx"
         response = requests.get(url)
         data = response.json()
         tdate=date.today().isoformat
